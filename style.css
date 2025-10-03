@@ -1,19 +1,15 @@
-/* =========================
-   TOKENS / BASE (mobile-first)
-   Paleta: #3D5E6B, #9CA5B1, #D5D0C4, #877C73, #44474D + branco/preto
-   ========================= */
 :root{
   --brand:   #3D5E6B;
   --brand-700:#2f4953;
   --brand-100:#d5e3e8;
 
-  --ink:     #121418;      /* texto primário claro */
-  --ink-2:   #44474D;      /* cinza escuro */
-  --muted:   #9CA5B1;      /* cinza-azulado para detalhes */
-  --paper:   #ffffff;      /* superfícies claras */
-  --beige:   #D5D0C4;      /* fundo suave */
-  --taupe:   #877C73;      /* acentos secundários */
-  --line:    #e1e4e8;      /* divisórias */
+  --ink:     #121418; 
+  --ink-2:   #44474D; 
+  --muted:   #9CA5B1; 
+  --paper:   #ffffff;   
+  --beige:   #D5D0C4;   
+  --taupe:   #877C73;     
+  --line:    #e1e4e8;      
 
   --danger:  #b42318;
 
@@ -34,14 +30,14 @@
   --shadow: 0 1px 0 rgba(0,0,0,.04), 0 10px 24px rgba(0,0,0,.06);
 }
 
-/* ====== Dark Mode (automático pelo SO) ====== */
+/* Modo escuro */
 @media (prefers-color-scheme: dark){
   :root{
-    --paper:#1c1f23;       /* base escura */
-    --ink:#f4f6f8;         /* texto primário alto contraste */
+    --paper:#1c1f23;       
+    --ink:#f4f6f8;    
     --ink-2:#cfd6de;
     --line:#2a3036;
-    --brand:#9CA5B1;       /* marca mais clara para contraste */
+    --brand:#9CA5B1;     
     --brand-700:#b9c1cb;
     --brand-100:#2a333b;
     --beige:#2a2a27;
@@ -83,9 +79,7 @@ img{max-width:100%; height:auto}
 
 .container{max-width:1120px; margin-inline:auto; padding:0 var(--space-4)}
 
-/* =========================
-   HEADER / TOPBAR 
-   ========================= */
+
 .topbar{
   position:sticky; top:0; z-index:10;
   background:var(--paper);
@@ -98,16 +92,16 @@ img{max-width:100%; height:auto}
   gap:var(--space-3); padding:var(--space-3) 0;
 }
 
-/* Marca + Nav */
+
 .brand{display:flex; align-items:center; gap:var(--space-3)}
 .brand__logo{font-size:var(--fs-18); font-weight:900; color:var(--brand)}
-.nav{display:none} /* fechado em mobile */
+.nav{display:none}
 .nav--open{display:block}
 .nav ul{display:flex; flex-direction:column; gap:var(--space-2); list-style:none; padding:0; margin:0}
 .nav a{color:var(--ink-2)}
 .nav a[aria-current="page"]{color:var(--ink); font-weight:700}
 
-/* Busca */
+
 .search{display:flex; gap:var(--space-2); width:100%}
 .search input{
   flex:1; height:38px; padding:0 var(--space-4);
@@ -134,12 +128,10 @@ img{max-width:100%; height:auto}
   .btn--outline:hover{background:var(--brand-100)}
 }
 
-/* =========================
-   LAYOUT GERAL (Grid)
-   ========================= */
+
 .layout{
   display:grid;
-  grid-template-columns: 1fr; /* mobile-first */
+  grid-template-columns: 1fr;
   gap:var(--space-4);
   padding:var(--space-4) 0 var(--space-6);
 }
@@ -151,7 +143,7 @@ img{max-width:100%; height:auto}
   box-shadow:var(--shadow);
 }
 
-/* Sidebar */
+
 .sidebar{padding:var(--space-4)}
 .sidebar__title{font-size:var(--fs-16)}
 .menu{list-style:none; margin:0; padding:0}
@@ -159,11 +151,11 @@ img{max-width:100%; height:auto}
 .menu a{color:var(--ink-2)}
 .menu a:hover{color:var(--ink)}
 
-/* Content */
+
 .content{display:flex; flex-direction:column; gap:var(--space-4)}
 .page-head h2{font-size:var(--fs-18)}
 
-/* KPIs */
+
 .kpis{
   display:grid;
   grid-template-columns: 1fr;
@@ -173,7 +165,7 @@ img{max-width:100%; height:auto}
 .kpi__label{color:var(--ink-2); font-size:var(--fs-12); margin-bottom:6px}
 .kpi__value{font-size:var(--fs-24); font-weight:900}
 
-/* Seção categorias */
+
 .section__head{
   display:flex; flex-direction:column; gap:var(--space-3);
   padding:var(--space-4); border-bottom:1px solid var(--line);
@@ -189,7 +181,7 @@ img{max-width:100%; height:auto}
   .section__search input{background:#111416; color:var(--ink); border-color:var(--line)}
 }
 
-/* Lista estilo tabela */
+
 .list{padding:var(--space-3) var(--space-3) var(--space-4); margin:0; list-style:none}
 .list__row{
   display:grid; grid-template-columns:1fr auto; align-items:center;
@@ -208,7 +200,7 @@ img{max-width:100%; height:auto}
 }
 .list .right{display:flex; gap:10px}
 
-/* Chips */
+
 .chip{
   height:32px; padding:0 14px;
   border-radius:999px; border:1px solid var(--brand);
@@ -219,7 +211,7 @@ img{max-width:100%; height:auto}
 .chip--danger{border-color:var(--danger); color:var(--danger)}
 .chip--danger:hover{background:#fdeceb22}
 
-/* Pills */
+
 .pills{display:flex; gap:var(--space-2); flex-wrap:wrap}
 .pill{
   border:1px solid var(--line); background:transparent;
@@ -230,49 +222,37 @@ img{max-width:100%; height:auto}
   .pill:hover{border-color:#3a424a}
 }
 
-/* Rodapé */
+
 .footnote{color:var(--ink-2)}
 
-/* =========================
-   BREAKPOINTS
-   ========================= */
 
-/* ≥ 320px: já coberto */
-
-/* ≥ 768px (tablets) */
 @media (min-width: 768px){
   .topbar__inner{gap:var(--space-4)}
   .search{width:auto; min-width:360px}
   .kpis{grid-template-columns: repeat(2, minmax(0,1fr))}
-  /* nav aparece como dropdown colunado em tablet ao abrir; fechado por padrão */
 }
 
-/* ≥ 1024px (desktops) */
+
 @media (min-width: 1024px){
   .layout{
-    grid-template-columns: 280px 1fr; /* aside + conteúdo */
+    grid-template-columns: 280px 1fr; 
     align-items:start;
   }
   .kpis{grid-template-columns: repeat(4, minmax(0,1fr))}
   .section__head{flex-direction:row; align-items:center; justify-content:space-between}
 
-  /* Nav horizontal e hamburger oculto */
-  .hamburger{display:none}
+
+
   .nav{display:block}
   .nav ul{flex-direction:row; gap:var(--space-3)}
 }
 
-/* Redução de movimento */
+
 @media (prefers-reduced-motion: reduce){
   *{animation:none !important; transition:none !important}
 }
 
 
-/* =========================
-   Extras – Criar Post / Editor
-   ========================= */
-
-/* Form base */
 .form{padding: var(--space-4)}
 .field{display:flex; flex-direction:column; gap:6px; margin-bottom: var(--space-4)}
 .field label{font-weight:700; font-size: var(--fs-14); color: var(--ink)}
@@ -297,19 +277,19 @@ img{max-width:100%; height:auto}
 .field textarea{resize:vertical}
 .help{color:var(--ink-2); font-size: var(--fs-12); margin-top:4px}
 
-/* Duas colunas para campos menores (>=768px) */
+
 .row-2{display:grid; grid-template-columns:1fr; gap: var(--space-4)}
 @media (min-width: 768px){
   .row-2{grid-template-columns:1fr 1fr}
 }
 
-/* Barra de ações */
+
 .actions{
   display:flex; flex-wrap:wrap; gap: var(--space-3);
   padding-top: var(--space-2);
 }
 
-/* Em editor, linha sutil sob o cabeçalho da coluna “Post” (opcional) */
+
 .list__row--head span:first-child{
   position:relative;
 }
