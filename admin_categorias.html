@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HABIT — Painel Admin</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topbar" role="banner">
+    <div class="topbar__inner container">
+      <div class="brand">
+        <button
+          class="hamburger"
+          aria-label="Abrir menu"
+          aria-controls="nav-principal"
+          aria-expanded="false"
+        >
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+        </button>
+
+        <h1 class="brand__logo">HABIT</h1>
+
+        <nav id="nav-principal" class="nav" aria-label="Navegação principal">
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Páginas</a></li>
+            <li><a href="#">Destaques</a></li>
+            <li><a href="#">Assinar</a></li>
+            <li><a href="#" aria-current="page">Admin</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <form class="search" role="search" aria-label="Buscar no site">
+        <label class="sr-only" for="q">Buscar</label>
+        <input id="q" name="q" type="search" placeholder="Buscar…" inputmode="search" />
+        <button type="submit" class="btn btn--primary">Buscar</button>
+        <button type="button" class="btn btn--outline">Entrar</button>
+      </form>
+    </div>
+  </header>
+
+  <main id="conteudo" class="container layout" role="main">
+    <aside class="sidebar card" aria-labelledby="ttl-menu">
+      <h2 id="ttl-menu" class="sidebar__title">Menu</h2>
+      <nav aria-label="Administração">
+        <ul class="menu">
+          <li><a href="#">Categorias</a></li>
+          <li><a href="#">Criar Post</a></li>
+          <li><a href="#">Escolhas do Editor</a></li>
+          <li><a href="#">Usuários</a></li>
+          <li><a href="#">Fila de revisão</a></li>
+          <li><a href="#">Fila de comentários</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <section class="content">
+      <header class="page-head">
+        <h2>Visão geral</h2>
+      </header>
+
+      <section class="kpis" aria-labelledby="ttl-kpi">
+        <h3 id="ttl-kpi" class="sr-only">Métricas</h3>
+
+        <article class="kpi card" aria-label="Total de posts">
+          <p class="kpi__label">Posts</p>
+          <p class="kpi__value" aria-live="polite">128</p>
+        </article>
+
+        <article class="kpi card" aria-label="Total de visualizações">
+          <p class="kpi__label">Visualizações</p>
+          <p class="kpi__value">54k</p>
+        </article>
+
+        <article class="kpi card" aria-label="Total de inscritos">
+          <p class="kpi__label">Inscritos</p>
+          <p class="kpi__value">12k</p>
+        </article>
+
+        <article class="kpi card" aria-label="Total de pendências">
+          <p class="kpi__label">Pendências</p>
+          <p class="kpi__value">7</p>
+        </article>
+      </section>
+
+      <section class="card" aria-labelledby="ttl-categorias">
+        <header class="section__head">
+          <h3 id="ttl-categorias">Categorias</h3>
+
+          <form class="section__search" role="search" aria-label="Buscar categorias">
+            <label class="sr-only" for="buscar-categorias">Buscar categorias</label>
+            <input id="buscar-categorias" type="search" placeholder="Buscar categorias…" inputmode="search" />
+          </form>
+        </header>
+
+        <ul class="list" role="list">
+          <li class="list__row list__row--head" aria-hidden="true">
+            <span>Categoria</span><span class="right"></span>
+          </li>
+
+          <li class="list__row" role="listitem">
+            <span>Categoria #1</span>
+            <span class="right">
+              <button type="button" class="chip" aria-label="Editar Categoria 1">Editar</button>
+              <button type="button" class="chip chip--danger" aria-label="Excluir Categoria 1">Excluir</button>
+            </span>
+          </li>
+
+          <li class="list__row" role="listitem">
+            <span>Categoria #2</span>
+            <span class="right">
+              <button type="button" class="chip" aria-label="Editar Categoria 2">Editar</button>
+              <button type="button" class="chip chip--danger" aria-label="Excluir Categoria 2">Excluir</button>
+            </span>
+          </li>
+
+          <li class="list__row" role="listitem">
+            <span>Categoria #3</span>
+            <span class="right">
+              <button type="button" class="chip" aria-label="Editar Categoria 3">Editar</button>
+              <button type="button" class="chip chip--danger" aria-label="Excluir Categoria 3">Excluir</button>
+            </span>
+          </li>
+
+          <li class="list__row" role="listitem">
+            <span>Categoria #4</span>
+            <span class="right">
+              <button type="button" class="chip" aria-label="Editar Categoria 4">Editar</button>
+              <button type="button" class="chip chip--danger" aria-label="Excluir Categoria 4">Excluir</button>
+            </span>
+          </li>
+
+          <li class="list__row" role="listitem">
+            <span>Categoria #5</span>
+            <span class="right">
+              <button type="button" class="chip" aria-label="Editar Categoria 5">Editar</button>
+              <button type="button" class="chip chip--danger" aria-label="Excluir Categoria 5">Excluir</button>
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="pills" aria-label="Tags rápidas">
+        <button type="button" class="pill">Instagram</button>
+        <button type="button" class="pill">Work</button>
+        <button type="button" class="pill">Bags</button>
+        <button type="button" class="pill">Lamp</button>
+        <button type="button" class="pill">Books</button>
+      </section>
+
+      <footer class="footnote" role="contentinfo">
+        <small>© 2025 Meu Site • Meu site</small>
+      </footer>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
