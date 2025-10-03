@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HABIT - Usu&aacute;rios</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <div class="logo">HABIT</div>
+      <nav class="site-nav" aria-label="Navega&ccedil;&atilde;o principal">
+        <ul>
+          <li><a href="#">In&iacute;cio</a></li>
+          <li><a href="#">P&aacute;ginas</a></li>
+          <li><a href="#">Destaques</a></li>
+          <li><a href="#">Assinar</a></li>
+          <li><a href="#">Admin</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <input type="text" class="search-field" placeholder="Buscar..." />
+        <button type="button" class="btn btn-outline pill">Buscar</button>
+        <button type="button" class="btn btn-outline pill">Entrar</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="wrapper">
+      <section class="dashboard-surface">
+        <div class="dashboard-grid">
+          <aside class="profile-panel" aria-labelledby="perfil-heading">
+            <h2 id="perfil-heading">Perfil</h2>
+            <div class="avatar-placeholder" aria-hidden="true"></div>
+            <form class="profile-form">
+              <div class="form-group">
+                <label class="visually-hidden" for="profile-name">Nome</label>
+                <input id="profile-name" type="text" placeholder="Nome" />
+              </div>
+              <div class="form-group">
+                <label class="visually-hidden" for="profile-bio">Bio</label>
+                <textarea id="profile-bio" placeholder="Bio"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
+          </aside>
+
+          <section class="posts-panel" aria-labelledby="posts-heading">
+            <h2 id="posts-heading">Suas Postagens</h2>
+            <div class="post-list">
+              <article class="post-card">
+                <div class="post-thumb" aria-hidden="true"></div>
+                <div class="post-details">
+                  <span class="post-status draft">Rascunho</span>
+                  <h3>Post 1</h3>
+                </div>
+              </article>
+              <article class="post-card">
+                <div class="post-thumb" aria-hidden="true"></div>
+                <div class="post-details">
+                  <span class="post-status published">Publicado</span>
+                  <h3>Post 2</h3>
+                </div>
+              </article>
+              <article class="post-card">
+                <div class="post-thumb" aria-hidden="true"></div>
+                <div class="post-details">
+                  <span class="post-status review">Em an&aacute;lise</span>
+                  <h3>Coment&aacute;rio 1</h3>
+                </div>
+              </article>
+              <article class="post-card">
+                <div class="post-thumb" aria-hidden="true"></div>
+                <div class="post-details">
+                  <span class="post-status published">Publicado</span>
+                  <h3>Coment&aacute;rio 2</h3>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <nav class="footer-menu" aria-label="Links complementares">
+        <a href="#" class="footer-chip">Instagram</a>
+        <a href="#" class="footer-chip">Work</a>
+        <a href="#" class="footer-chip">Bags</a>
+        <a href="#" class="footer-chip">Lamp</a>
+        <a href="#" class="footer-chip">Books</a>
+      </nav>
+      <p class="footer-note">&copy; 2025 Meu Site &middot; Meu site</p>
+    </div>
+  </footer>
+</body>
+</html>
