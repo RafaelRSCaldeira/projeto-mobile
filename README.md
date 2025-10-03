@@ -64,8 +64,9 @@ Sem frameworks. Modo escuro automático.
 
 ```text
 /projeto
-├─ admin_usuarios.html          # Lista de usuários
-├─ admin_filarevisao.html       # Fila de revisão de posts
-├─ admin_filacomentarios.html   # Fila de comentários
-├─ styles.css                   # Estilos compartilhados (Grid/Flex, tokens, dark mode)
+├─ admin_usuarios.html          
+├─ admin_filarevisao.html       
+├─ admin_filacomentarios.html   
+├─ styles.css                   
 └─ README.md
+
