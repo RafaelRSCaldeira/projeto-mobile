@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HABIT — Criar Post</title>
+
+  <!-- Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- HEADER (sem hamburger) -->
+  <header class="topbar" role="banner">
+    <div class="topbar__inner container">
+      <div class="brand">
+        <h1 class="brand__logo">HABIT</h1>
+
+        <nav id="nav-principal" class="nav" aria-label="Navegação principal">
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Páginas</a></li>
+            <li><a href="#">Destaques</a></li>
+            <li><a href="#">Assinar</a></li>
+            <li><a href="#" aria-current="page">Admin</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <form class="search" role="search" aria-label="Buscar no site">
+        <label class="sr-only" for="q">Buscar</label>
+        <input id="q" name="q" type="search" placeholder="Buscar…" inputmode="search" />
+        <button type="submit" class="btn btn--primary">Buscar</button>
+        <button type="button" class="btn btn--outline">Entrar</button>
+      </form>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main id="conteudo" class="container layout" role="main">
+    <!-- Sidebar -->
+    <aside class="sidebar card" aria-labelledby="ttl-menu">
+      <h2 id="ttl-menu" class="sidebar__title">Menu</h2>
+      <nav aria-label="Administração">
+        <ul class="menu">
+          <li><a href="#">Categorias</a></li>
+          <li><a href="#" aria-current="page">Criar Post</a></li>
+          <li><a href="#">Escolhas do Editor</a></li>
+          <li><a href="#">Usuários</a></li>
+          <li><a href="#">Fila de revisão</a></li>
+          <li><a href="#">Fila de comentários</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Conteúdo -->
+    <section class="content">
+      <!-- KPIs -->
+      <section class="kpis" aria-labelledby="ttl-kpi">
+        <h2 id="ttl-kpi" class="sr-only">Métricas</h2>
+
+        <article class="kpi card" aria-label="Total de posts">
+          <p class="kpi__label">Posts</p>
+          <p class="kpi__value">128</p>
+        </article>
+        <article class="kpi card" aria-label="Total de visualizações">
+          <p class="kpi__label">Visualizações</p>
+          <p class="kpi__value">54k</p>
+        </article>
+        <article class="kpi card" aria-label="Total de inscritos">
+          <p class="kpi__label">Inscritos</p>
+          <p class="kpi__value">12k</p>
+        </article>
+        <article class="kpi card" aria-label="Total de pendências">
+          <p class="kpi__label">Pendências</p>
+          <p class="kpi__value">7</p>
+        </article>
+      </section>
+
+      <!-- Formulário Criar Post -->
+      <section class="card" aria-labelledby="ttl-criar">
+        <header class="section__head">
+          <h2 id="ttl-criar">Criar Post</h2>
+        </header>
+
+        <form class="form" aria-describedby="hint-editor">
+          <div class="field">
+            <label for="titulo">Título</label>
+            <input id="titulo" name="titulo" type="text" placeholder="Título" required />
+          </div>
+
+          <div class="field">
+            <label for="editor">Conteúdo</label>
+            <textarea id="editor" name="editor" rows="8" placeholder="Escreva aqui… (Editor simulador)"></textarea>
+            <small id="hint-editor" class="help">Use Markdown básico. Imagens têm <code>alt</code> obrigatório.</small>
+          </div>
+
+          <div class="row-2">
+            <div class="field">
+              <label for="tags">Categorias e tags</label>
+              <input id="tags" name="tags" type="text" placeholder="Ex.: Tecnologia, UX, IA" />
+            </div>
+
+            <div class="field">
+              <label for="capa">Upload da imagem de capa</label>
+              <input id="capa" name="capa" type="file" accept="image/*" />
+            </div>
+          </div>
+
+          <div class="actions">
+            <button type="button" class="btn">Salvar rascunho</button>
+            <button type="submit" class="btn btn--outline">Enviar para revisão</button>
+            <button type="submit" class="btn btn--primary" aria-label="Publicar como administrador">
+              Publicar (admin)
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Tags / Pills -->
+      <section class="pills" aria-label="Tags rápidas">
+        <button type="button" class="pill">Instagram</button>
+        <button type="button" class="pill">Work</button>
+        <button type="button" class="pill">Bags</button>
+        <button type="button" class="pill">Lamp</button>
+        <button type="button" class="pill">Books</button>
+      </section>
+
+      <footer class="footnote" role="contentinfo">
+        <small>© 2025 Meu Site • Meu site</small>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>

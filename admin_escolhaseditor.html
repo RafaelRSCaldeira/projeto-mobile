@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HABIT — Escolhas do Editor</title>
+
+  <!-- Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- HEADER (sem hamburger) -->
+  <header class="topbar" role="banner">
+    <div class="topbar__inner container">
+      <div class="brand">
+        <h1 class="brand__logo">HABIT</h1>
+
+        <nav id="nav-principal" class="nav" aria-label="Navegação principal">
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Páginas</a></li>
+            <li><a href="#">Destaques</a></li>
+            <li><a href="#">Assinar</a></li>
+            <li><a href="#" aria-current="page">Admin</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <form class="search" role="search" aria-label="Buscar no site">
+        <label class="sr-only" for="q">Buscar</label>
+        <input id="q" name="q" type="search" placeholder="Buscar…" inputmode="search" />
+        <button type="submit" class="btn btn--primary">Buscar</button>
+        <button type="button" class="btn btn--outline">Entrar</button>
+      </form>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main id="conteudo" class="container layout" role="main">
+    <!-- Sidebar -->
+    <aside class="sidebar card" aria-labelledby="ttl-menu">
+      <h2 id="ttl-menu" class="sidebar__title">Menu</h2>
+      <nav aria-label="Administração">
+        <ul class="menu">
+          <li><a href="#">Categorias</a></li>
+          <li><a href="#">Criar Post</a></li>
+          <li><a href="#" aria-current="page">Escolhas do Editor</a></li>
+          <li><a href="#">Usuários</a></li>
+          <li><a href="#">Fila de revisão</a></li>
+          <li><a href="#">Fila de comentários</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Conteúdo -->
+    <section class="content">
+      <!-- KPIs -->
+      <section class="kpis" aria-labelledby="ttl-kpi">
+        <h2 id="ttl-kpi" class="sr-only">Métricas</h2>
+
+        <article class="kpi card" aria-label="Total de posts">
+          <p class="kpi__label">Posts</p>
+          <p class="kpi__value">128</p>
+        </article>
+        <article class="kpi card" aria-label="Total de visualizações">
+          <p class="kpi__label">Visualizações</p>
+          <p class="kpi__value">54k</p>
+        </article>
+        <article class="kpi card" aria-label="Total de inscritos">
+          <p class="kpi__label">Inscritos</p>
+          <p class="kpi__value">12k</p>
+        </article>
+        <article class="kpi card" aria-label="Total de pendências">
+          <p class="kpi__label">Pendências</p>
+          <p class="kpi__value">7</p>
+        </article>
+      </section>
+
+      <!-- Lista Escolhas do Editor -->
+      <section class="card" aria-labelledby="ttl-editor">
+        <header class="section__head">
+          <h2 id="ttl-editor">Escolhas do Editor</h2>
+
+          <form class="section__search" role="search" aria-label="Buscar posts">
+            <label class="sr-only" for="buscar-posts">Buscar posts</label>
+            <input id="buscar-posts" type="search" placeholder="Buscar posts…" inputmode="search" />
+          </form>
+        </header>
+
+        <ul class="list" role="list" aria-label="Posts">
+          <li class="list__row list__row--head" aria-hidden="true">
+            <span>Post</span><span class="right"></span>
+          </li>
+
+          <li class="list__row">
+            <span>Post #1</span>
+            <span class="right">
+              <button type="button" class="chip chip--danger">Remover</button>
+            </span>
+          </li>
+
+          <li class="list__row">
+            <span>Post #2</span>
+            <span class="right">
+              <button type="button" class="chip">Agendar</button>
+            </span>
+          </li>
+
+          <li class="list__row">
+            <span>Post #3</span>
+            <span class="right">
+              <button type="button" class="chip">Agendar</button>
+            </span>
+          </li>
+
+          <li class="list__row">
+            <span>Post #4</span>
+            <span class="right">
+              <button type="button" class="chip chip--danger">Remover</button>
+            </span>
+          </li>
+
+          <li class="list__row">
+            <span>Post #5</span>
+            <span class="right">
+              <button type="button" class="chip">Agendar</button>
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Tags / Pills -->
+      <section class="pills" aria-label="Tags rápidas">
+        <button type="button" class="pill">Instagram</button>
+        <button type="button" class="pill">Work</button>
+        <button type="button" class="pill">Bags</button>
+        <button type="button" class="pill">Lamp</button>
+        <button type="button" class="pill">Books</button>
+      </section>
+
+      <footer class="footnote" role="contentinfo">
+        <small>© 2025 Meu Site • Meu site</small>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
