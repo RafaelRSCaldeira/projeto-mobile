@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -15,17 +15,19 @@
             <span class="nav-content">
                 <h3>HABIT</h3>
                 <ul id="primary-navigation" class="nav-links">
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Páginas</a></li>
-                    <li><a href="#">Destaques</a></li>
-                    <li><a href="#">Assinar</a></li>
-                    <li><a href="#">Admin</a></li>
+                    <li><a href="index.html">In&iacute;cio</a></li>
+                    <li><a href="escolhas_editor.html">P&aacute;ginas</a></li>
+                    <li><a href="destaques.html">Destaques</a></li>
+                    <li><a href="newsletter.html">Assinar</a></li>
+                    <li><a href="admin_categorias.html">Admin</a></li>
                 </ul>
             </span>
             <span class="nav-actions">
-                <input type="text" class="search-bar" placeholder="Buscar...">
-                <button class="button-primary">Buscar</button>
-                <button class="button-secondary">Entrar</button>
+                <form class="search" role="search" aria-label="Buscar no site">
+                    <input type="search" class="search-bar" placeholder="Buscar..." aria-label="Buscar" />
+                    <button type="submit" class="button-primary">Buscar</button>
+                </form>
+                <a class="button-secondary" href="login.html">Entrar</a>
             </span>
         </nav>
         <hr class="section-separator"/>
@@ -35,8 +37,8 @@
                     <h1>Navegue por tópicos de interesse</h1>
                     <p>Descubra conteúdos por categorias, posts em destaque e as escolhas do editor.</p>
                     <div class="hero-actions">
-                        <button class="button-primary">Explorar categorias</button>
-                        <button class="button-secondary">Assine a newsletter</button>
+                        <a class="button-primary" href="destaques.html">Explorar categorias</a>
+                        <a class="button-secondary" href="newsletter.html">Assine a newsletter</a>
                     </div>
                 </div>
                 <aside class="hero-aside" aria-hidden="true">
@@ -130,3 +132,7 @@
     </div>
 </body>
 </html>
+
+
+
+

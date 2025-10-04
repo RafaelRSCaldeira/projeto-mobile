@@ -1,185 +1,59 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Newsletter</title>
-  <style>
-    :root {
-      --color-primary: #2f8f83;
-      --color-bg-light: #f5f5f5;
-      --color-border: #ddd;
-      --color-text: #111;
-      --color-gray: #666;
-      --radius: 10px;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #fff;
-      color: var(--color-text);
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2rem;
-    }
-
-    .logo-nav {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .logo {
-      font-weight: bold;
-    }
-
-    nav a {
-      margin-right: 0.5rem;
-      text-decoration: none;
-      color: var(--color-text);
-      font-size: 0.9rem;
-    }
-
-    .search-box {
-      display: flex;
-      gap: 0.25rem;
-    }
-
-    .search-box input {
-      padding: 0.3rem 0.5rem;
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius);
-      font-size: 0.9rem;
-    }
-
-    .search-box button {
-      padding: 0.3rem 0.8rem;
-      border: 1px solid var(--color-primary);
-      color: var(--color-primary);
-      background-color: transparent;
-      border-radius: var(--radius);
-      cursor: pointer;
-      font-size: 0.9rem;
-    }
-
-    .newsletter-box {
-      background-color: var(--color-bg-light);
-      border-radius: var(--radius);
-      padding: 2rem;
-      text-align: center;
-      border: 1px solid var(--color-border);
-    }
-
-    .newsletter-box h2 {
-      margin-bottom: 1rem;
-      font-size: 1.3rem;
-    }
-
-    .newsletter-box input[type="email"] {
-      width: 100%;
-      padding: 0.7rem;
-      margin-bottom: 1rem;
-      border-radius: var(--radius);
-      border: 1px solid var(--color-border);
-    }
-
-    .newsletter-box label {
-      display: block;
-      font-size: 0.8rem;
-      color: var(--color-gray);
-      margin-bottom: 0.5rem;
-    }
-
-    .newsletter-box button {
-      background-color: var(--color-primary);
-      color: white;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: var(--radius);
-      font-size: 0.9rem;
-      cursor: pointer;
-    }
-
-    .footer-tags {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .tag {
-      background-color: var(--color-bg-light);
-      padding: 0.8rem 2rem;
-      border-radius: var(--radius);
-      font-size: 0.9rem;
-      border: 1px solid var(--color-border);
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 1rem;
-      font-size: 0.85rem;
-      color: var(--color-gray);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="logo-nav">
-        <div class="logo">HABIT</div>
-        <nav>
-          <a href="#">Início</a>
-          <a href="#">Páginas</a>
-          <a href="#">Destaques</a>
-          <a href="#">Assinar</a>
-          <a href="#">Admin</a>
+    <div class="container">
+        <nav class="nav-bar">
+            <span class="nav-content">
+                <h3>HABIT</h3>
+                <ul id="primary-navigation" class="nav-links">
+                    <li><a href="index.html">In&iacute;cio</a></li>
+                    <li><a href="escolhas_editor.html">P&aacute;ginas</a></li>
+                    <li><a href="destaques.html">Destaques</a></li>
+                    <li><a href="newsletter.html">Assinar</a></li>
+                    <li><a href="admin_categorias.html">Admin</a></li>
+                </ul>
+            </span>
+            <span class="nav-actions">
+                <form class="search" role="search" aria-label="Buscar no site">
+                    <input type="search" class="search-bar" placeholder="Buscar..." aria-label="Buscar" />
+                    <button type="submit" class="button-primary">Buscar</button>
+                </form>
+                <a class="button-secondary" href="login.html">Entrar</a>
+            </span>
         </nav>
-      </div>
-      <div class="search-box">
-        <input type="text" placeholder="Buscar...">
-        <button>Buscar</button>
-        <button>Entrar</button>
-      </div>
-    </header>
-
-    <main>
-      <div class="newsletter-box">
-        <h2>Assine a newsletter</h2>
-        <input type="email" placeholder="E-mail">
-        <label><input type="checkbox"> Concordo em receber comunicações e li a política de privacidade.</label>
-        <button>Assinar</button>
-      </div>
-
-      <div class="footer-tags">
-        <div class="tag">Instagram</div>
-        <div class="tag">Work</div>
-        <div class="tag">Bags</div>
-        <div class="tag">Lamp</div>
-        <div class="tag">Books</div>
-      </div>
-    </main>
-
-    <footer>
-      © 2025 Meu Site • Meu site
-    </footer>
-  </div>
+        <main class="newsletter-main">
+            <section class="newsletter-box">
+                <h2>Assine a newsletter</h2>
+                <input type="email" placeholder="E-mail" aria-label="E-mail">
+                <label>
+                    <input type="checkbox">
+                    Concordo em receber comunica&ccedil;&otilde;es e li a pol&iacute;tica de privacidade.
+                </label>
+                <button class="button-primary">Assinar</button>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-tags">
+                <span class="pill">Instagram</span>
+                <span class="pill">Work</span>
+                <span class="pill">Bags</span>
+                <span class="pill">Lamp</span>
+                <span class="pill">Books</span>
+            </div>
+            <div class="copyright">&copy; 2025 Meu Site &middot; Meu site</div>
+        </footer>
+    </div>
 </body>
 </html>
+
+
+

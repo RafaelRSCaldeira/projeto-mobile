@@ -1,239 +1,111 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HABIT - Dashboard</title>
-    <style>
-      :root {
-        --color-primary: #25b396;
-        --color-border: #ddd;
-        --color-text: #111;
-        --bg-light: #f9f9f9;
-        --space-sm: 0.5rem;
-        --space-md: 1rem;
-        --space-lg: 2rem;
-        --radius: 10px;
-      }
-
-      body {
-        margin: 0;
-        font-family: sans-serif;
-        background-color: #fff;
-        color: var(--color-text);
-      }
-
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: var(--space-sm) var(--space-md);
-        border-bottom: 2px solid var(--color-border);
-      }
-
-      header nav span {
-        margin-left: var(--space-md);
-        font-weight: 500;
-      }
-
-      .search-login {
-        display: flex;
-        gap: var(--space-sm);
-      }
-
-      .search-login input[type="text"],
-      .search-login button {
-        padding: var(--space-sm) var(--space-md);
-        border: 1px solid var(--color-border);
-        border-radius: var(--radius);
-        background-color: white;
-      }
-
-      .search-login button {
-        color: var(--color-primary);
-        font-weight: bold;
-        cursor: pointer;
-      }
-
-      .container {
-        display: flex;
-        padding: var(--space-md);
-        gap: var(--space-md);
-      }
-
-      aside {
-        flex: 1;
-        background-color: var(--bg-light);
-        padding: var(--space-md);
-        border-radius: var(--radius);
-        border: 1px solid var(--color-border);
-      }
-
-      main {
-        flex: 3;
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-md);
-      }
-
-      .stats {
-        display: flex;
-        gap: var(--space-md);
-      }
-
-      .stat-box {
-        flex: 1;
-        background-color: var(--bg-light);
-        padding: var(--space-md);
-        border-radius: var(--radius);
-        border: 1px solid var(--color-border);
-        text-align: center;
-      }
-
-      .editor-box {
-        background-color: var(--bg-light);
-        padding: var(--space-md);
-        border-radius: var(--radius);
-        border: 1px solid var(--color-border);
-      }
-
-      .editor-box input[type="text"] {
-        width: 100%;
-        padding: var(--space-sm);
-        margin-bottom: var(--space-sm);
-        border-radius: var(--radius);
-        border: 1px solid var(--color-border);
-      }
-
-      .post-row {
-        display: flex;
-        justify-content: space-between;
-        padding: var(--space-sm) 0;
-        border-bottom: 1px solid var(--color-border);
-      }
-
-      .post-actions button {
-        margin-left: var(--space-sm);
-        padding: var(--space-sm) var(--space-md);
-        border-radius: var(--radius);
-        border: 1px solid var(--color-primary);
-        color: var(--color-primary);
-        background-color: white;
-        cursor: pointer;
-      }
-
-      footer {
-        padding: var(--space-md);
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        border-top: 1px solid var(--color-border);
-        margin-top: var(--space-md);
-      }
-
-      .footer-tag {
-        flex: 1 1 18%;
-        margin: var(--space-sm);
-        padding: var(--space-sm) var(--space-md);
-        text-align: center;
-        border: 1px solid var(--color-border);
-        border-radius: var(--radius);
-        font-weight: bold;
-        background-color: white;
-      }
-
-      .copyright {
-        text-align: center;
-        font-size: 0.8rem;
-        margin-top: var(--space-md);
-        color: gray;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div><strong>HABIT</strong><span>Início</span><span>Páginas</span><span>Destaques</span><span>Assinar</span><span>Admin</span></div>
-      <div class="search-login">
-        <input type="text" placeholder="Buscar..." />
-        <button>Buscar</button>
-        <button>Entrar</button>
-      </div>
-    </header>
-
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolhas do Editor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
     <div class="container">
-      <aside>
-        <h4>Menu</h4>
-        <ul>
-          <li>Categorias</li>
-          <li>Criar Post</li>
-          <li>Escolhas do Editor</li>
-          <li>Usuários</li>
-          <li>Fila de revisão</li>
-          <li>Fila de comentários</li>
-        </ul>
-      </aside>
-      <main>
-        <div class="stats">
-          <div class="stat-box">
-            <strong>Posts</strong><br />128
-          </div>
-          <div class="stat-box">
-            <strong>Visualizações</strong><br />54k
-          </div>
-          <div class="stat-box">
-            <strong>Inscritos</strong><br />12k
-          </div>
-          <div class="stat-box">
-            <strong>Pendências</strong><br />7
-          </div>
-        </div>
-
-        <div class="editor-box">
-          <h4>Escolhas do Editor</h4>
-          <input type="text" placeholder="Buscar posts..." />
-          <div class="post-row">
-            <span>Post #1</span>
-            <div class="post-actions">
-              <button>Remover</button>
+        <nav class="nav-bar">
+            <span class="nav-content">
+                <h3>HABIT</h3>
+                <ul id="primary-navigation" class="nav-links">
+                    <li><a href="index.html">In&iacute;cio</a></li>
+                    <li><a href="escolhas_editor.html">P&aacute;ginas</a></li>
+                    <li><a href="destaques.html">Destaques</a></li>
+                    <li><a href="newsletter.html">Assinar</a></li>
+                    <li><a href="admin_categorias.html">Admin</a></li>
+                </ul>
+            </span>
+            <span class="nav-actions">
+                <form class="search" role="search" aria-label="Buscar no site">
+                    <input type="search" class="search-bar" placeholder="Buscar..." aria-label="Buscar" />
+                    <button type="submit" class="button-primary">Buscar</button>
+                </form>
+                <a class="button-secondary" href="login.html">Entrar</a>
+            </span>
+        </nav>
+        <main class="main-content">
+            <section class="section">
+                <h2>Escolhas do Editor</h2>
+                <p class="meta">Hist&oacute;rias selecionadas manualmente para inspirar sua pr&oacute;xima leitura.</p>
+            </section>
+            <section class="section">
+                <div class="featured-grid">
+                    <div class="featured-posts">
+                        <article class="post-card">
+                            <div class="thumb" aria-hidden="true"></div>
+                            <div class="post-body">
+                                <span class="meta">31 Jul 2025 &bull; Tecnologia</span>
+                                <h4 class="post-title">Como o Design Multissensorial Est&aacute; Moldando Produtos</h4>
+                                <span class="reading-time">3 min de leitura</span>
+                            </div>
+                        </article>
+                        <article class="post-card">
+                            <div class="thumb" aria-hidden="true"></div>
+                            <div class="post-body">
+                                <span class="meta">31 Jul 2025 &bull; Produtividade</span>
+                                <h4 class="post-title">As Rotinas Matinais dos Fundadores de Startups</h4>
+                                <span class="reading-time">4 min de leitura</span>
+                            </div>
+                        </article>
+                        <article class="post-card">
+                            <div class="thumb" aria-hidden="true"></div>
+                            <div class="post-body">
+                                <span class="meta">31 Jul 2025 &bull; Lifestyle</span>
+                                <h4 class="post-title">O Guia Essencial para um Escrit&oacute;rio Minimalista</h4>
+                                <span class="reading-time">6 min de leitura</span>
+                            </div>
+                        </article>
+                        <article class="post-card">
+                            <div class="thumb" aria-hidden="true"></div>
+                            <div class="post-body">
+                                <span class="meta">31 Jul 2025 &bull; Neg&oacute;cios</span>
+                                <h4 class="post-title">Tend&ecirc;ncias de Assinaturas Digitais para Ficar de Olho</h4>
+                                <span class="reading-time">5 min de leitura</span>
+                            </div>
+                        </article>
+                    </div>
+                    <aside class="editor-picks">
+                        <h3>Temas em destaque</h3>
+                        <div class="editor-card">
+                            <ul>
+                                <li>Guia pr&aacute;tico de IA aplicada ao cotidiano</li>
+                                <li>Os melhores fluxos de onboarding para apps</li>
+                                <li>Como times remotos mant&ecirc;m a cultura viva</li>
+                                <li>Estrat&eacute;gias de conte&uacute;do evergreen</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+            <section class="section">
+                <h3>Mais recomenda&ccedil;&otilde;es</h3>
+                <div class="posts-grid">
+                    <article class="cat-card"><div class="cat-thumb" aria-hidden="true"></div><h4 class="post-title">Narrativas que Conectam Marcas e Pessoas</h4><small class="meta">31 Jul 2025</small></article>
+                    <article class="cat-card"><div class="cat-thumb" aria-hidden="true"></div><h4 class="post-title">Por Que Times Interdisciplinares Performam Melhor</h4><small class="meta">31 Jul 2025</small></article>
+                    <article class="cat-card"><div class="cat-thumb" aria-hidden="true"></div><h4 class="post-title">Checklist de Revis&atilde;o para Publicar Sem Medo</h4><small class="meta">31 Jul 2025</small></article>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-tags">
+                <span class="pill">Instagram</span>
+                <span class="pill">Work</span>
+                <span class="pill">Bags</span>
+                <span class="pill">Lamp</span>
+                <span class="pill">Books</span>
             </div>
-          </div>
-          <div class="post-row">
-            <span>Post #2</span>
-            <div class="post-actions">
-              <button>Agendar</button>
-            </div>
-          </div>
-          <div class="post-row">
-            <span>Post #3</span>
-            <div class="post-actions">
-              <button>Agendar</button>
-            </div>
-          </div>
-          <div class="post-row">
-            <span>Post #4</span>
-            <div class="post-actions">
-              <button>Remover</button>
-            </div>
-          </div>
-          <div class="post-row">
-            <span>Post #5</span>
-            <div class="post-actions">
-              <button>Agendar</button>
-            </div>
-          </div>
-        </div>
-      </main>
+            <div class="copyright">&copy; 2025 Meu Site &middot; Meu site</div>
+        </footer>
     </div>
-
-    <footer>
-      <div class="footer-tag">Instagram</div>
-      <div class="footer-tag">Work</div>
-      <div class="footer-tag">Bags</div>
-      <div class="footer-tag">Lamp</div>
-      <div class="footer-tag">Books</div>
-    </footer>
-    <div class="copyright">
-      © 2025 Meu Site - Meu site
-    </div>
-  </body>
+</body>
 </html>
+
+
+
