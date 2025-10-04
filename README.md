@@ -1,7 +1,17 @@
-## Mobiletes — Projeto Front‑end
+# Projeto da Matéria de Desenvolvimento Mobile
+
+
+## Professor - Jose Carmino
+
+## Grupo
+- Alice Ozaki - 10418466
+- Catarina Senkiio - 10419495
+- Guilherme Piragibe - 10401198
+- Matheus Meloni - 10426969
+- Rafael Caldera - 10417103
 
 ### Visão geral
-Projeto front‑end estático composto por páginas públicas e páginas administrativas. O layout é responsivo (breakpoints em 320px, 768px e 1024px), utiliza a fonte Roboto (Google Fonts) e um CSS unificado para todas as páginas. As imagens da página principal ficam centralizadas na pasta `assets/`.
+Projeto para composição da nota N1 com telas estáticas composto por páginas públicas e páginas administrativas. O layout é responsivo (breakpoints em 320px, 768px e 1024px), utiliza a fonte Roboto (Google Fonts) e um CSS unificado para todas as páginas. O projeto foi versificado por meio do GitHub e as reuniões do grupo feitas pela plataforma Discord. As imagens da página principal ficam centralizadas na pasta `assets/`.
 
 ### Requisitos
 - **Navegador moderno**: Chrome, Edge, Firefox ou Safari recente
@@ -56,10 +66,5 @@ Projeto front‑end estático composto por páginas públicas e páginas adminis
 - Todas as imagens utilizadas pela home e categorias ficam em `assets/`
 - Exemplos: `hero.webp`, `post1.jpg`, `post2.png`, imagens de categorias
 
-### Integrantes
-- Rafael Caldeira
-- Catarina Senkiio
-- Alice ozaki
-- Matheus Meloni
-- Guilherme piragibe
+
 
