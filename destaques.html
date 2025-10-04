@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HABIT – Destaques</title>
+  <style>
+    :root {
+      --color-primary: #2f8f83;
+      --color-bg-light: #f5f5f5;
+      --color-border: #ddd;
+      --color-text: #111;
+      --color-gray: #666;
+
+      --space-xs: 0.25rem;
+      --space-sm: 0.5rem;
+      --space-md: 1rem;
+      --space-lg: 1.5rem;
+      --space-xl: 2rem;
+
+      --radius: 10px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: var(--color-text);
+      background-color: #fff;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: var(--space-xl);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--space-xl);
+    }
+
+    .logo-nav {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--color-text);
+      margin-right: var(--space-sm);
+      font-size: 0.95rem;
+    }
+
+    .search-box {
+      display: flex;
+      gap: var(--space-xs);
+    }
+
+    .search-box input {
+      padding: var(--space-xs) var(--space-sm);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+    }
+
+    .search-box button {
+      padding: var(--space-xs) var(--space-sm);
+      font-size: 0.9rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--color-primary);
+      color: var(--color-primary);
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-lg);
+    }
+
+    .card {
+      background-color: var(--color-bg-light);
+      padding: var(--space-md);
+      border-radius: var(--radius);
+      border: 1px solid var(--color-border);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-sm);
+    }
+
+    .placeholder-img {
+      width: 100%;
+      height: 120px;
+      background-color: #ddd;
+      border-radius: var(--radius);
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-top: var(--space-xs);
+    }
+
+    .footer-tags {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-md);
+      margin-top: var(--space-xl);
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      background-color: var(--color-bg-light);
+      padding: 0.8rem 2rem;
+      border-radius: var(--radius);
+      font-size: 0.95rem;
+      border: 1px solid var(--color-border);
+      text-align: center;
+      min-width: 100px;
+    }
+
+    footer {
+      margin-top: var(--space-lg);
+      font-size: 0.85rem;
+      color: var(--color-gray);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <div class="logo-nav">
+        <div class="logo">HABIT</div>
+        <nav>
+          <a href="#">Início</a>
+          <a href="#">Páginas</a>
+          <a href="#">Destaques</a>
+          <a href="#">Assinar</a>
+          <a href="#">Admin</a>
+        </nav>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Buscar...">
+        <button>Buscar</button>
+        <button>Entrar</button>
+      </div>
+    </header>
+
+    <main>
+      <h1>Destaques</h1>
+
+      <section class="grid">
+        <div class="card"><div class="placeholder-img"></div><div class="card-title">Destaque 1</div></div>
+        <div class="card"><div class="placeholder-img"></div><div class="card-title">Destaque 2</div></div>
+        <div class="card"><div class="placeholder-img"></div><div class="card-title">Destaque 3</div></div>
+        <div class="card"><div class="placeholder-img"></div><div class="card-title">Destaque 4</div></div>
+        <div class="card"><div class="placeholder-img"></div><div class="card-title">Destaque 5</div></div>
+        <div class="card"><div class="placeholder-img"></div><div class="card-title">Destaque 6</div></div>
+        <div class="card"><div class="placeholder-img"></div><div class="card-title">Destaque 7</div></div>
+        <div class="card"><div class="placeholder-img"></div><div class="card-title">Destaque 8</div></div>
+        <div class="card"><div class="placeholder-img"></div><div class="card-title">Destaque 9</div></div>
+      </section>
+
+      <div class="footer-tags">
+        <div class="tag">Instagram</div>
+        <div class="tag">Work</div>
+        <div class="tag">Bags</div>
+        <div class="tag">Lamp</div>
+        <div class="tag">Books</div>
+      </div>
+    </main>
+
+    <footer>
+      © 2025 Meu Site • Meu site
+    </footer>
+
+  </div>
+
+</body>
+</html>
