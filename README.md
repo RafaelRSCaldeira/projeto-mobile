@@ -1,73 +1,41 @@
-# React + TypeScript + Vite
+# Projeto Mobiletes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web criada em React + TypeScript para reutilizar o layout e o conteúdo que antes estavam disponíveis apenas em arquivos HTML estáticos dentro da pasta `old`. Todo o visual original foi migrado para componentes React e páginas com rotas do `react-router-dom`, mantendo o mesmo design por meio da folha de estilos original (`src/styles/style.css`).
 
-Currently, two official plugins are available:
+## Principais pontos
+- Estrutura de layout compartilhada com cabeçalho, rodapé e formulário de busca.
+- Conteúdo das páginas organizado em módulos de dados (`src/data`) para facilitar manutenção e reutilização.
+- Conjunto completo de páginas públicas (home, categorias, destaques, newsletter, autenticação) e páginas administrativas com painel e listas reutilizáveis.
+- Build e bundling feitos com Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Como executar o projeto
 
-## React Compiler
+1. **Instale as dependências**
+   ```bash
+   npm install
+   ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. **Suba o servidor de desenvolvimento**
+   ```bash
+   npm run dev
+   ```
+   O terminal mostrará o endereço (por padrão `http://localhost:5173`) para acessar a aplicação.
 
-## Expanding the ESLint configuration
+3. **Gerar build de produção**
+   ```bash
+   npm run build
+   ```
+   Os arquivos prontos para deploy ficam em `dist/`. Para checar o build localmente você pode usar:
+   ```bash
+   npm run preview
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Estrutura recomendada
+- `src/components`: componentes reutilizáveis (layout, seções, listas, etc.).
+- `src/pages`: páginas públicas, administrativas e de autenticação.
+- `src/data`: conteúdo mockado utilizado para renderizar as páginas.
+- `src/assets`: imagens migradas da versão original.
+- `old`: referência da versão HTML/CSS estática original.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Sinta-se à vontade para substituir os dados mockados por integrações reais quando houver uma API disponível.  
+Contribuições são bem-vindas! Ajuste ou crie novos componentes seguindo a mesma abordagem modular.*** End Patch
