@@ -12,11 +12,6 @@ import AdminCreatePostPage from './pages/admin/AdminCreatePostPage';
 import AdminEditorChoicesPage from './pages/admin/AdminEditorChoicesPage';
 import AdminReviewQueuePage from './pages/admin/AdminReviewQueuePage';
 import AdminUsersPage from './pages/admin/AdminUsersPage';
-import LoginPage from './pages/auth/LoginPage';
-import SignUpPage from './pages/auth/SignUpPage';
-import CategoryPage from './pages/categories/CategoryPage';
-import DestaquesPage from './pages/highlights/DestaquesPage';
-import EditorChoicesPage from './pages/highlights/EditorChoicesPage';
 
 const rootElement = document.getElementById('root');
 
@@ -26,12 +21,7 @@ if (rootElement) {
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<HomePage />} />
-          <Route path="escolhas-do-editor" element={<EditorChoicesPage />} />
-          <Route path="destaques" element={<DestaquesPage />} />
           <Route path="newsletter" element={<NewsletterPage />} />
-          <Route path="categorias/:slug" element={<CategoryPage />} />
-          <Route path="login" element={<LoginPage />} />
-          <Route path="criar-conta" element={<SignUpPage />} />
           <Route path="usuarios" element={<UsuariosPage />} />
         </Route>
 
