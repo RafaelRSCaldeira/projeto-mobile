@@ -13,6 +13,8 @@ import AdminCreatePostPage from './pages/admin/AdminCreatePostPage';
 import AdminEditorChoicesPage from './pages/admin/AdminEditorChoicesPage';
 import AdminReviewQueuePage from './pages/admin/AdminReviewQueuePage';
 import AdminUsersPage from './pages/admin/AdminUsersPage';
+import EditorChoicesPage from './pages/highlights/EditorChoicesPage';
+import DestaquesPage from './pages/highlights/DestaquesPage';
 
 const rootElement = document.getElementById('root');
 
@@ -22,6 +24,8 @@ if (rootElement) {
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<HomePage />} />
+          <Route path="escolhas-do-editor" element={<EditorChoicesPage />} />
+          <Route path="destaques" element={<DestaquesPage />} />
           <Route path="newsletter" element={<NewsletterPage />} />
           <Route path="usuarios" element={<UsuariosPage />} />
         </Route>
